@@ -107,15 +107,7 @@
       "date": "2026-11-02",
       "status": "В пути",
       "track_number": "TRK-1234567890",
-      "total_price": 64970,
-      "delivery_address": "Москва, ул. Лесная, 7, кв. 24",
-      "delivery_date": "4 ноября, 10:00–18:00",
-      "tracking": [
-        { "step": "Новый", "date": "2 ноя, 09:42", "status": "done" },
-        { "step": "Сборка", "date": "2 ноя, 11:20", "status": "done" },
-        { "step": "В пути", "date": "3 ноя, 08:15", "status": "current" },
-        { "step": "Доставлен", "date": "4 ноя, ожидается", "status": "pending" }
-      ]
+      "total_price": 64970
     },
     {
       "id": 1031,
@@ -123,15 +115,7 @@
       "date": "2026-10-18",
       "status": "Доставлен",
       "track_number": "TRK-0987654321",
-      "total_price": 17990,
-      "delivery_address": "Москва, ул. Лесная, 7, кв. 24",
-      "delivery_date": "18 октября 2026",
-      "tracking": [
-        { "step": "Новый", "date": "18 окт, 10:00", "status": "done" },
-        { "step": "Сборка", "date": "18 окт, 14:30", "status": "done" },
-        { "step": "В пути", "date": "19 окт, 09:00", "status": "done" },
-        { "step": "Доставлен", "date": "19 окт, 16:45", "status": "done" }
-      ]
+      "total_price": 17990
     },
     {
       "id": 1014,
@@ -139,51 +123,13 @@
       "date": "2026-09-26",
       "status": "Доставлен",
       "track_number": "TRK-1122334455",
-      "total_price": 29990,
-      "delivery_address": "Москва, ул. Лесная, 7, кв. 24",
-      "delivery_date": "26 сентября 2026",
-      "tracking": [
-        { "step": "Новый", "date": "26 сен, 11:20", "status": "done" },
-        { "step": "Сборка", "date": "26 сен, 15:00", "status": "done" },
-        { "step": "В пути", "date": "27 сен, 10:30", "status": "done" },
-        { "step": "Доставлен", "date": "27 сен, 18:00", "status": "done" }
-      ]
+      "total_price": 29990
     }
   ],
   "order_items": [
-    {
-      "id": 1,
-      "order_id": 1048,
-      "product_id": 1,
-      "quantity": 1,
-      "price_at_moment": 34990
-    },
-    {
-      "id": 2,
-      "order_id": 1048,
-      "product_id": 3,
-      "quantity": 2,
-      "price_at_moment": 14990
-    },
-    {
-      "id": 3,
-      "order_id": 1031,
-      "product_id": 4,
-      "quantity": 1,
-      "price_at_moment": 17990
-    },
-    {
-      "id": 4,
-      "order_id": 1014,
-      "product_id": 2,
-      "quantity": 1,
-      "price_at_moment": 29990
-    }
-  ],
-  "favorites": [
-    {
-      "user_id": 2,
-      "product_id": 2
-    }
+    { "id": 1, "order_id": 1048, "product_id": 1, "quantity": 1, "price_at_moment": 34990 },
+    { "id": 2, "order_id": 1048, "product_id": 3, "quantity": 2, "price_at_moment": 14990 },
+    { "id": 3, "order_id": 1031, "product_id": 4, "quantity": 1, "price_at_moment": 17990 },
+    { "id": 4, "order_id": 1014, "product_id": 2, "quantity": 1, "price_at_moment": 29990 }
   ]
 }

@@ -29,9 +29,6 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
           <span class="header__cart-count">3 товара</span>
         </button>
-        <a class="header__profile" href="profile.html" aria-label="Личный кабинет">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
-        </a>
       </div>
       <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -86,42 +83,38 @@
         </div>
 
         <div class="filters__body">
-        <div class="filters__panel-header">
-          <span>Фильтры</span>
-          <svg class="filters__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
-        </div>
-        <div class="filter-group filter-group--price">
-          <h4 class="filter-group__title">Цена, ₽</h4>
-          <div class="filter-price">
-            <input type="text" class="filter-price__input" value="От 0">
-            <input type="text" class="filter-price__input" value="До 150 000">
-          </div>
-          <div class="filter-slider">
-            <div class="filter-slider__track">
-              <div class="filter-slider__fill"></div>
-              <div class="filter-slider__handle filter-slider__handle--left"></div>
-              <div class="filter-slider__handle filter-slider__handle--right"></div>
+          <div class="filter-group filter-group--price">
+            <h4 class="filter-group__title">Цена, ₽</h4>
+            <div class="filter-price">
+              <input type="text" class="filter-price__input" value="От 0">
+              <input type="text" class="filter-price__input" value="До 150 000">
+            </div>
+            <div class="filter-slider">
+              <div class="filter-slider__track">
+                <div class="filter-slider__fill"></div>
+                <div class="filter-slider__handle filter-slider__handle--left"></div>
+                <div class="filter-slider__handle filter-slider__handle--right"></div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="filter-group filter-group--brand">
-          <h4 class="filter-group__title">Бренд</h4>
-          <label class="filter-check"><input type="checkbox"><span>Sony</span></label>
-          <label class="filter-check"><input type="checkbox"><span>Sennheiser</span></label>
-          <label class="filter-check"><input type="checkbox"><span>Marshall</span></label>
-          <label class="filter-check"><input type="checkbox"><span>JBL</span></label>
-          <label class="filter-check"><input type="checkbox"><span>Audio-Technica</span></label>
-          <label class="filter-check"><input type="checkbox"><span>KEF</span></label>
-        </div>
+          <div class="filter-group filter-group--brand">
+            <h4 class="filter-group__title">Бренд</h4>
+            <label class="filter-check"><input type="checkbox"><span>Sony</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Sennheiser</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Marshall</span></label>
+            <label class="filter-check"><input type="checkbox"><span>JBL</span></label>
+            <label class="filter-check"><input type="checkbox"><span>Audio-Technica</span></label>
+            <label class="filter-check"><input type="checkbox"><span>KEF</span></label>
+          </div>
 
-        <div class="filter-group filter-group--stock">
-          <h4 class="filter-group__title">Наличие</h4>
-          <label class="filter-check"><input type="checkbox" checked><span>Только в наличии</span></label>
-        </div>
+          <div class="filter-group filter-group--stock">
+            <h4 class="filter-group__title">Наличие</h4>
+            <label class="filter-check"><input type="checkbox" checked><span>Только в наличии</span></label>
+          </div>
 
-        <button class="btn btn--primary btn--full filters__apply">Показать 6 товаров</button>
-        <button class="filter-reset">Сбросить фильтры</button>
+          <button class="btn btn--primary btn--full filters__apply">Показать 6 товаров</button>
+          <button class="filter-reset">Сбросить фильтры</button>
         </div>
       </aside>
 
@@ -250,6 +243,8 @@
     </div>
   </footer>
 
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="js/auth.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

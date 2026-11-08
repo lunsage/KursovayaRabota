@@ -29,9 +29,6 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
           <span class="header__cart-count">3 товара</span>
         </button>
-        <a class="header__profile" href="profile.html" aria-label="Личный кабинет">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
-        </a>
       </div>
       <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -69,13 +66,13 @@
 
     <div class="profile-top">
       <div class="profile-user">
-        <div class="profile-avatar">АК</div>
+        <div class="profile-avatar" id="profileAvatar">АК</div>
         <div class="profile-user__info">
-          <div class="profile-user__name">Алексей Ковалёв</div>
-          <div class="profile-user__phone">+7 916 123-45-67</div>
+          <div class="profile-user__name" id="profileName">Алексей Ковалёв</div>
+          <div class="profile-user__phone" id="profilePhone">+7 916 123-45-67</div>
         </div>
       </div>
-      <a href="auth.html" class="profile-logout">Выйти</a>
+      <a href="#" class="profile-logout" id="logoutBtn">Выйти</a>
     </div>
 
     <nav class="profile-tabs">
@@ -96,7 +93,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="ordersTableBody">
           <tr>
             <td class="order-num">№ 1048</td>
             <td>2 ноября 2026</td>
@@ -213,6 +210,19 @@
     </div>
   </footer>
 
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="js/auth.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    (function() {
+      const user = JSON.parse(localStorage.getItem('currentUser'));
+      if (user) {
+        document.getElementById('profileName').textContent = user.name;
+        document.getElementById('profilePhone').textContent = user.phone;
+        const initials = user.name.split(' ').map(n => n[0]).join('').toUpperCase();
+        document.getElementById('profileAvatar').textContent = initials;
+      }
+    })();
+  </script>
 </body>
 </html>
