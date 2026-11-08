@@ -1,0 +1,189 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Администратор",
+      "email": "admin@audiodream.ru",
+      "phone": "+7-900-000-00-01",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Алексей Ковалёв",
+      "email": "alex.k@mail.ru",
+      "phone": "+7 916 123-45-67",
+      "password": "client123",
+      "role": "client"
+    },
+    {
+      "id": 3,
+      "name": "Мария Сидорова",
+      "email": "maria.s@mail.ru",
+      "phone": "+7-900-000-00-03",
+      "password": "client123",
+      "role": "client"
+    }
+  ],
+  "brands": [
+    { "id": 1, "name": "Sony", "country": "Япония" },
+    { "id": 2, "name": "Sennheiser", "country": "Германия" },
+    { "id": 3, "name": "Marshall", "country": "Великобритания" },
+    { "id": 4, "name": "JBL", "country": "США" },
+    { "id": 5, "name": "Audio-Technica", "country": "Япония" },
+    { "id": 6, "name": "KEF", "country": "Великобритания" }
+  ],
+  "categories": [
+    { "id": 1, "name": "Наушники", "description": "Для музыки, работы и тишины" },
+    { "id": 2, "name": "Колонки", "description": "Большой звук для любого пространства" },
+    { "id": 3, "name": "Винил", "description": "Музыка, которую можно потрогать" }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "WH-1000XM5",
+      "brand_id": 1,
+      "price": 34990,
+      "category_id": 1,
+      "stock": 12,
+      "image": "assets/img/product-sony.png",
+      "description": "Беспроводные наушники"
+    },
+    {
+      "id": 2,
+      "name": "MOMENTUM 4 Wireless",
+      "brand_id": 2,
+      "price": 29990,
+      "category_id": 1,
+      "stock": 8,
+      "image": "assets/img/product-sennheiser.png",
+      "description": "Беспроводные наушники"
+    },
+    {
+      "id": 3,
+      "name": "Major V",
+      "brand_id": 3,
+      "price": 14990,
+      "category_id": 1,
+      "stock": 24,
+      "image": "assets/img/product-marshall.png",
+      "description": "Накладные наушники"
+    },
+    {
+      "id": 4,
+      "name": "Charge 5",
+      "brand_id": 4,
+      "price": 17990,
+      "category_id": 2,
+      "stock": 16,
+      "image": "assets/img/product-jbl.png",
+      "description": "Портативная акустика"
+    },
+    {
+      "id": 5,
+      "name": "AT-LP60X",
+      "brand_id": 5,
+      "price": 24990,
+      "category_id": 3,
+      "stock": 6,
+      "image": "assets/img/product-turntable.png",
+      "description": "Виниловый проигрыватель"
+    },
+    {
+      "id": 6,
+      "name": "LSX II",
+      "brand_id": 6,
+      "price": 129990,
+      "category_id": 2,
+      "stock": 4,
+      "image": "assets/img/product-kef.png",
+      "description": "Полочная акустика · пара"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1048,
+      "user_id": 2,
+      "date": "2026-11-02",
+      "status": "В пути",
+      "track_number": "TRK-1234567890",
+      "total_price": 64970,
+      "delivery_address": "Москва, ул. Лесная, 7, кв. 24",
+      "delivery_date": "4 ноября, 10:00–18:00",
+      "tracking": [
+        { "step": "Новый", "date": "2 ноя, 09:42", "status": "done" },
+        { "step": "Сборка", "date": "2 ноя, 11:20", "status": "done" },
+        { "step": "В пути", "date": "3 ноя, 08:15", "status": "current" },
+        { "step": "Доставлен", "date": "4 ноя, ожидается", "status": "pending" }
+      ]
+    },
+    {
+      "id": 1031,
+      "user_id": 2,
+      "date": "2026-10-18",
+      "status": "Доставлен",
+      "track_number": "TRK-0987654321",
+      "total_price": 17990,
+      "delivery_address": "Москва, ул. Лесная, 7, кв. 24",
+      "delivery_date": "18 октября 2026",
+      "tracking": [
+        { "step": "Новый", "date": "18 окт, 10:00", "status": "done" },
+        { "step": "Сборка", "date": "18 окт, 14:30", "status": "done" },
+        { "step": "В пути", "date": "19 окт, 09:00", "status": "done" },
+        { "step": "Доставлен", "date": "19 окт, 16:45", "status": "done" }
+      ]
+    },
+    {
+      "id": 1014,
+      "user_id": 2,
+      "date": "2026-09-26",
+      "status": "Доставлен",
+      "track_number": "TRK-1122334455",
+      "total_price": 29990,
+      "delivery_address": "Москва, ул. Лесная, 7, кв. 24",
+      "delivery_date": "26 сентября 2026",
+      "tracking": [
+        { "step": "Новый", "date": "26 сен, 11:20", "status": "done" },
+        { "step": "Сборка", "date": "26 сен, 15:00", "status": "done" },
+        { "step": "В пути", "date": "27 сен, 10:30", "status": "done" },
+        { "step": "Доставлен", "date": "27 сен, 18:00", "status": "done" }
+      ]
+    }
+  ],
+  "order_items": [
+    {
+      "id": 1,
+      "order_id": 1048,
+      "product_id": 1,
+      "quantity": 1,
+      "price_at_moment": 34990
+    },
+    {
+      "id": 2,
+      "order_id": 1048,
+      "product_id": 3,
+      "quantity": 2,
+      "price_at_moment": 14990
+    },
+    {
+      "id": 3,
+      "order_id": 1031,
+      "product_id": 4,
+      "quantity": 1,
+      "price_at_moment": 17990
+    },
+    {
+      "id": 4,
+      "order_id": 1014,
+      "product_id": 2,
+      "quantity": 1,
+      "price_at_moment": 29990
+    }
+  ],
+  "favorites": [
+    {
+      "user_id": 2,
+      "product_id": 2
+    }
+  ]
+}

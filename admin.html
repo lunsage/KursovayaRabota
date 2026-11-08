@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ-панель — AudioDream</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Москва · Доставка по всей России</span>
+      <span>Поможем с выбором: 8 800 700-24-08</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">AudioDream</a>
+      <nav class="nav">
+        <a href="catalog.html">Каталог</a>
+        <a href="cart.html">Корзина</a>
+        <a href="profile.html">Кабинет</a>
+        <a href="auth.html">Вход</a>
+      </nav>
+      <div class="header__right">
+        <button class="header__cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
+          <span class="header__cart-count">3 товара</span>
+        </button>
+        <a class="header__profile" href="profile.html" aria-label="Личный кабинет">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+        </a>
+      </div>
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <nav class="mobile-nav">
+    <div class="mobile-nav__inner">
+      <a href="catalog.html">Каталог</a>
+      <a href="cart.html">Корзина</a>
+      <a href="profile.html">Кабинет</a>
+      <a href="auth.html">Вход</a>
+    </div>
+  </nav>
+
+  <div class="searchbar">
+    <div class="container">
+      <div class="search">
+        <svg class="search__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" class="search__input" placeholder="Найти свой звук">
+        <span class="search__hint">Наушники, акустика, винил</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container main">
+    <div class="admin-layout">
+
+      <aside class="admin-sidebar">
+        <div class="admin-sidebar__title">УПРАВЛЕНИЕ</div>
+        <nav class="admin-menu">
+          <a href="#" class="admin-menu__item admin-menu__item--active">Обзор</a>
+          <a href="#" class="admin-menu__item">Товары</a>
+          <a href="#" class="admin-menu__item">Заказы</a>
+          <a href="#" class="admin-menu__item">Настройки</a>
+        </nav>
+        <a href="index.html" class="admin-back">← Вернуться в магазин</a>
+      </aside>
+
+      <div class="admin-content">
+        <div class="admin-breadcrumb">AudioDream / Админ-панель</div>
+        <h1 class="admin-title">Админ-панель</h1>
+        <p class="admin-subtitle">Обзор магазина · Товары и последние заказы</p>
+
+        <div class="admin-stats">
+          <div class="stat-card">
+            <div class="stat-card__value">6</div>
+            <div class="stat-card__label">Товаров</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value">3</div>
+            <div class="stat-card__label">Заказа</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value">1</div>
+            <div class="stat-card__label">В пути</div>
+          </div>
+        </div>
+
+        <div class="admin-tabs-row">
+          <span class="admin-tabs-row__label">Перейти к разделу на этой странице</span>
+          <div class="admin-tabs-row__links">
+            <a href="#products">Товары</a>
+            <a href="#orders">Заказы</a>
+          </div>
+        </div>
+
+        <section id="products" class="admin-section">
+          <div class="admin-section__header">
+            <h2>Товары · 6</h2>
+            <button class="btn btn--primary">Добавить товар</button>
+          </div>
+          <div class="admin-search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" placeholder="Поиск по названию или бренду">
+          </div>
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Товар</th>
+                <th>Цена</th>
+                <th>Остаток</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="admin-product">
+                    <div class="admin-product__img"><img src="assets/img/product-sony.png" alt=""></div>
+                    <div>
+                      <div class="admin-product__brand">Sony</div>
+                      <div class="admin-product__name">WH-1000XM5</div>
+                    </div>
+                  </div>
+                </td>
+                <td>34 990 ₽</td>
+                <td>12 шт.</td>
+                <td>
+                  <button class="admin-action"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+                  <button class="admin-action admin-action--delete"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"/></svg></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="admin-product">
+                    <div class="admin-product__img"><img src="assets/img/product-sennheiser.png" alt=""></div>
+                    <div>
+                      <div class="admin-product__brand">Sennheiser</div>
+                      <div class="admin-product__name">MOMENTUM 4 Wireless</div>
+                    </div>
+                  </div>
+                </td>
+                <td>29 990 ₽</td>
+                <td>8 шт.</td>
+                <td>
+                  <button class="admin-action"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+                  <button class="admin-action admin-action--delete"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"/></svg></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="admin-product">
+                    <div class="admin-product__img"><img src="assets/img/product-marshall.png" alt=""></div>
+                    <div>
+                      <div class="admin-product__brand">Marshall</div>
+                      <div class="admin-product__name">Major V</div>
+                    </div>
+                  </div>
+                </td>
+                <td>14 990 ₽</td>
+                <td>24 шт.</td>
+                <td>
+                  <button class="admin-action"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+                  <button class="admin-action admin-action--delete"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"/></svg></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="admin-product">
+                    <div class="admin-product__img"><img src="assets/img/product-jbl.png" alt=""></div>
+                    <div>
+                      <div class="admin-product__brand">JBL</div>
+                      <div class="admin-product__name">Charge 5</div>
+                    </div>
+                  </div>
+                </td>
+                <td>17 990 ₽</td>
+                <td>16 шт.</td>
+                <td>
+                  <button class="admin-action"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+                  <button class="admin-action admin-action--delete"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"/></svg></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="admin-product">
+                    <div class="admin-product__img"><img src="assets/img/product-turntable.png" alt=""></div>
+                    <div>
+                      <div class="admin-product__brand">Audio-Technica</div>
+                      <div class="admin-product__name">AT-LP60X</div>
+                    </div>
+                  </div>
+                </td>
+                <td>24 990 ₽</td>
+                <td>6 шт.</td>
+                <td>
+                  <button class="admin-action"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+                  <button class="admin-action admin-action--delete"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"/></svg></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="admin-product">
+                    <div class="admin-product__img"><img src="assets/img/product-kef.png" alt=""></div>
+                    <div>
+                      <div class="admin-product__brand">KEF</div>
+                      <div class="admin-product__name">LSX II</div>
+                    </div>
+                  </div>
+                </td>
+                <td>129 990 ₽</td>
+                <td>4 шт.</td>
+                <td>
+                  <button class="admin-action"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+                  <button class="admin-action admin-action--delete"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"/></svg></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="orders" class="admin-section">
+          <div class="admin-section__header">
+            <h2>Заказы · 3</h2>
+            <div class="admin-status-filter">
+              <span>Все статусы</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Заказ</th>
+                <th>Дата</th>
+                <th>Покупатель</th>
+                <th>Сумма</th>
+                <th>Статус</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="order-num">№ 1048</td>
+                <td>2 ноября 2026</td>
+                <td>Алексей Ковалёв</td>
+                <td>64 970 ₽</td>
+                <td><span class="status status--pending">В пути</span></td>
+                <td><a href="#" class="link">Открыть</a></td>
+              </tr>
+              <tr>
+                <td class="order-num">№ 1031</td>
+                <td>18 октября 2026</td>
+                <td>Алексей Ковалёв</td>
+                <td>17 990 ₽</td>
+                <td><span class="status status--delivered">Доставлен</span></td>
+                <td><a href="#" class="link">Открыть</a></td>
+              </tr>
+              <tr>
+                <td class="order-num">№ 1014</td>
+                <td>26 сентября 2026</td>
+                <td>Алексей Ковалёв</td>
+                <td>29 990 ₽</td>
+                <td><span class="status status--delivered">Доставлен</span></td>
+                <td><a href="#" class="link">Открыть</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="admin-note">Данные обновлены 3 ноября 2026, 09:00</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__logo">AudioDream</div>
+        <div class="footer__links">
+          <a href="#">Доставка и оплата</a>
+          <a href="#">Гарантия и возврат</a>
+          <a href="#">Контакты</a>
+        </div>
+      </div>
+      <div class="footer__right">
+        <div class="footer__phone">8 800 700-24-08</div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 AudioDream. Ваша музыка. Ваш звук.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
